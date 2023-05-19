@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["fontawesome.com"],
+    domains: ["http://localhost:5001"],
   },
 };
 

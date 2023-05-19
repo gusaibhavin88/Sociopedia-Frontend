@@ -2,9 +2,13 @@ import React from "react";
 import styles from "../styles/profilecard.module.css";
 import Image from "next/image";
 import { cover, profile } from "../../public/Images";
+import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 const Profilecard = ({ location }) => {
-  console.log(location);
+  const user = useSelector((state) => state.auth.user);
+  console.log(user);
+  const router = useRouter();
   return (
     <div className={styles.profilecard}>
       <div className={styles.proimages}>
@@ -31,7 +35,7 @@ const Profilecard = ({ location }) => {
       </div>
       <div className={styles.follow}>
         <div className={styles.followersinfo}>
-          <h3>0</h3>
+          {/* <h3>{user.followers.length}</h3> */}
           <h3>followers</h3>
         </div>
         <div style={{ borderLeft: "1px solid var(--hrColor)" }}></div>
@@ -47,6 +51,7 @@ const Profilecard = ({ location }) => {
           letterSpacing: "1.5px",
           display: location ? "none" : "flex",
         }}
+        onClick={() => router.push(`/profile/${user._id}`)}
       >
         My Profile
       </h3>

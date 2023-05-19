@@ -6,10 +6,12 @@ import {
   faBell,
   faMessage,
 } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
 
 const Rightbtns = () => {
+  const router = useRouter();
   return (
-    <div className={styles.rightbtns}>
+    <div className={styles.rightbtns} onClick={() => router.replace("/home")}>
       <FontAwesomeIcon
         icon={faHouse}
         width={25}

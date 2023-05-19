@@ -29,7 +29,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "inter";
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Media Query for Laptops and Desktops */

@@ -12,15 +12,23 @@
 
 .friendinfo {
   display: flex;
-  width: 35rem;
   flex-direction: row;
+  width: 35rem;
   align-items: center;
   justify-content: space-between;
+}
+
+.flexseting {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .nameinfo {
   gap: 5px;
   display: flex;
   flex-direction: column;
+  margin-left: 2rem;
+  justify-self: auto;
 }
 .nameinfo > h4:nth-last-of-type(1) {
   font-weight: 100;
